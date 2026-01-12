@@ -1,0 +1,42 @@
+*.trainingData
+*.assessmentLog
+*.partialTac
+*.tacAssessment
+*.fig
+*.tif
+*.png
+*.mat
+*.zip
+*.asv
+*.log
+*.bak
+*.o
+*.xml
+*.txt
+*.tup/
+
+# Torch model files
+*.t7
+*.th
+
+# Torch temporary files
+*.dot
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Build artifacts
+build/
+dist/
+*.so
+*.dylib
+*.dll
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~

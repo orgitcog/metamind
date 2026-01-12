@@ -1,0 +1,61 @@
+-- This configuration file is written in the lua language
+-- More details about lua here: http://www.lua.org/manual/5.1/
+
+-- comments are prefixed by double dashes
+
+po8e_read_size = 8 -- samples
+
+NEURAL = 0 -- the default type
+EVENT = 1
+ANALOG = 2
+IGNORE = 3
+
+-- CARD 1
+
+channels = {}
+for i=1, 96 do
+  channel = {
+    id = i,
+    name = string.format("%s %03d", "M1", i),
+    scale_factor = 3276700,
+    data_type = NEURAL
+  }
+  channels[i] = channel
+end
+
+card = {
+  id = 1,
+  channels = channels,
+}
+
+po8e_cards = {};
+po8e_cards[1] = card
+
+-- CARD 2
+
+channels = {}
+for i=1, 96 do
+  channel = {
+    id = i,
+    --name = string.format("%s %03d", "S1", i),
+    --data_type = IGNORE
+  }
+  channels[i] = channel
+end
+
+--for i=97, 100 do
+--  channel = {
+--    id = i,
+--    name = "stim",
+--    data_type = EVENT
+--  }
+--  channels[i] = channel
+--end
+
+card = {
+  id = 2,
+  enabled = false,
+  channels = {}
+}
+
+po8e_cards[2] = card
