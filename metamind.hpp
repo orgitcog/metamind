@@ -1,5 +1,6 @@
 #pragma once
 
+#include <cstddef>
 #include <tuple>
 #include <type_traits>
 #include <utility>
@@ -38,8 +39,8 @@ struct Thread {
 
 template<typename... Threads>
 struct ThreadSet {
-    static_assert((!contains_v<Threads, Threads...> || true),
-                  "Duplicate threads");
+    // Note: Duplicate thread checking could be implemented with more complex metaprogramming
+    // For now, we allow any thread combination
 };
 
 template<typename... Ts>
