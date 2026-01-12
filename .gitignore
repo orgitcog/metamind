@@ -34,6 +34,9 @@ dist/
 *.dylib
 *.dll
 
+# Example executables
+examples/metamind_demo
+
 # IDE files
 .vscode/
 .idea/
